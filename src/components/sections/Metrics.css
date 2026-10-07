@@ -1,0 +1,24 @@
+.metrics-section { background: var(--bg); }
+.metrics-header { margin-bottom: var(--space-12); }
+.metrics-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+.metric-item {
+  padding: var(--space-6) var(--space-5); background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--r-lg); text-align: center;
+  transition: all var(--t-base); position: relative; overflow: hidden;
+}
+.metric-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), #818cf8);
+  opacity: 0; transition: opacity var(--t-base);
+}
+.metric-item:hover { border-color: var(--border-accent); box-shadow: var(--shadow-accent); transform: translateY(-3px); }
+.metric-item:hover::before { opacity: 1; }
+.metric-item-value { font-size: clamp(28px, 3.5vw, 40px); font-weight: 900; color: var(--accent); letter-spacing: -0.03em; line-height: 1; }
+.metric-item-label { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-top: var(--space-2); }
+.metric-item-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+@media (max-width: 1024px) { .metrics-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px) { .metrics-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); } }

@@ -1,0 +1,21 @@
+.about-section { background: var(--bg-2); }
+.about-header { margin-bottom: var(--space-12); }
+.about-body { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start; }
+.about-text { font-size: 16px; color: var(--text-secondary); line-height: 1.8; }
+.about-text strong { color: var(--text-primary); font-weight: 600; }
+
+.about-highlights { display: flex; flex-direction: column; gap: var(--space-4); }
+.about-highlight-card {
+  display: flex; gap: var(--space-4); padding: var(--space-5);
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
+  transition: all var(--t-base);
+}
+.about-highlight-card:hover { border-color: var(--border-accent); box-shadow: var(--shadow-md); transform: translateX(4px); }
+.about-highlight-icon {
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: var(--r-md);
+  background: var(--accent-dim); color: var(--accent); display: flex; align-items: center; justify-content: center;
+}
+.about-highlight-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.about-highlight-body { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+@media (max-width: 900px) { .about-body { grid-template-columns: 1fr; gap: var(--space-8); } }

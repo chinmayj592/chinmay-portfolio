@@ -1,0 +1,15 @@
+.coding-section { background: var(--bg); }
+.coding-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-12); }
+.coding-card { display: flex; flex-direction: column; gap: var(--space-3); text-decoration: none; }
+.coding-card-header { display: flex; align-items: center; justify-content: space-between; }
+.coding-icon { width: 48px; height: 48px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; }
+.coding-external { color: var(--text-muted); transition: color var(--t-fast); }
+.coding-card:hover .coding-external { color: var(--accent); }
+.coding-name { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+.coding-handle { font-size: 13px; color: var(--accent); font-weight: 600; }
+.coding-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; flex: 1; }
+.coding-stats { display: flex; gap: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border); margin-top: auto; }
+.coding-stat { text-align: center; }
+.coding-stat-value { display: block; font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.coding-stat-label { display: block; font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+@media (max-width: 768px) { .coding-grid { grid-template-columns: 1fr; } }

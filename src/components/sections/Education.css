@@ -1,0 +1,19 @@
+.education-section { background: var(--bg-2); }
+.education-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); margin-top: var(--space-12); }
+.edu-card { display: flex; gap: var(--space-5); align-items: flex-start; }
+.edu-card-primary { border-color: var(--border-accent); box-shadow: var(--shadow-accent); }
+.edu-card-icon {
+  width: 52px; height: 52px; border-radius: var(--r-md); background: var(--accent-dim);
+  color: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.edu-card-body { flex: 1; }
+.edu-institution { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.edu-location { font-size: 13px; color: var(--text-muted); margin-bottom: var(--space-4); }
+.edu-specialization { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: var(--space-4); }
+.edu-degrees { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-4); }
+.edu-degree { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); background: var(--bg-2); border-radius: var(--r-md); border: 1px solid var(--border); flex-wrap: wrap; }
+.edu-degree-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.edu-degree-year { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--accent); font-weight: 700; }
+.edu-coursework-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: var(--space-3); }
+.edu-coursework-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+@media (max-width: 768px) { .education-grid { grid-template-columns: 1fr; } }

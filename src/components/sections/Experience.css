@@ -1,0 +1,51 @@
+.experience-section { background: var(--bg); }
+.experience-timeline { margin-top: var(--space-12); display: flex; flex-direction: column; gap: var(--space-6); position: relative; }
+.experience-timeline::before {
+  content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+.exp-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-xl);
+  padding: var(--space-8); margin-left: 52px; position: relative; transition: all var(--t-base);
+}
+.exp-card:hover { border-color: var(--border-accent); box-shadow: var(--shadow-lg); }
+.exp-timeline-dot {
+  position: absolute; left: -40px; top: var(--space-8); width: 18px; height: 18px;
+  border-radius: 50%; background: var(--bg-card); border: 2px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+}
+.exp-timeline-dot-inner { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.exp-header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-6); flex-wrap: wrap; }
+.exp-header-left { display: flex; align-items: flex-start; gap: var(--space-4); }
+.exp-company-badge {
+  width: 48px; height: 48px; border-radius: var(--r-md); background: var(--accent-dim);
+  border: 1px solid var(--border-accent); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 800; color: var(--accent); flex-shrink: 0;
+}
+.exp-role { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.exp-company-info { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.exp-company { font-size: 15px; font-weight: 600; color: var(--accent); }
+.exp-sep { color: var(--text-muted); }
+.exp-location { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text-muted); }
+.exp-period { display: flex; align-items: center; gap: var(--space-2); font-size: 13px; color: var(--text-muted); flex-shrink: 0; flex-wrap: wrap; }
+.exp-duration-badge {
+  padding: 2px 8px; border-radius: var(--r-full); font-size: 11px; font-weight: 600;
+  background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,185,129,0.2);
+}
+.exp-metrics {
+  display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6);
+  padding: var(--space-5); background: var(--bg-2); border-radius: var(--r-lg); border: 1px solid var(--border);
+}
+.exp-metric { text-align: center; min-width: 80px; }
+.exp-metric-value { display: block; font-size: 22px; font-weight: 800; color: var(--accent); letter-spacing: -0.02em; line-height: 1; }
+.exp-metric-label { display: block; font-size: 11px; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
+.exp-achievements { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-5); }
+.exp-achievement { display: flex; align-items: flex-start; gap: var(--space-3); font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.exp-check { color: var(--green); flex-shrink: 0; margin-top: 2px; }
+.exp-tech { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+@media (max-width: 768px) {
+  .experience-timeline::before { display: none; }
+  .exp-card { margin-left: 0; }
+  .exp-timeline-dot { display: none; }
+  .exp-header { flex-direction: column; }
+}
